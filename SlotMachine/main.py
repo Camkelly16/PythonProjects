@@ -1,7 +1,7 @@
 #SlotMachine Project
-#The user will deposit some money, allows them to beg on 1-3 lines on the slotmachine, 
-# if they are right at multiply their beg by their money, allow them to keep playing until they cash out,
-# and add what they won to their 
+#The user will deposit some money, allows them to bet lines 1-3 on the slotmachine, 
+#If they is right multiply their bet by their money, allow them to keep playing until they cash out,
+# Add what they won to Balance 
 
 MAXLINE = 3
 def deposit():
