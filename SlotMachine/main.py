@@ -1,0 +1,42 @@
+#SlotMachine Project
+#The user will deposit some money, allows them to beg on 1-3 lines on the slotmachine, 
+# if they are right at multiply their beg by their money, allow them to keep playing until they cash out,
+# and add what they won to their 
+
+MAXLINE = 3
+def deposit():
+    while True: #Continually ask the user enter a vaild amount.
+            amount = input("What would you like to deposit? $")
+            if amount.isdigit():
+                  amount = int(amount)
+                  if amount > 0:
+                        break
+                  else:
+                        print("Amount must be greater than 0.")
+            else:
+                  print("Please enter a number.")
+
+    return amount
+
+def getNumberOfLine():
+    while True: 
+        lines = input("Enter the number of lines to bet on (1-" + str(MAXLINE) + ")? ")
+        if lines.isdigit():
+            lines = int(lines)
+            if 1 <= lines <= MAXLINE:
+                break
+            else:
+                print("Enter a valid number of lines.")
+        else:
+            print("Please enter a number.")
+
+    return lines
+
+def main():
+    balance = deposit()
+    lines = getNumberOfLine()
+    print(balance,lines)
+
+
+
+main()
